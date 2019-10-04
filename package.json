@@ -1,0 +1,51 @@
+{
+  "main": "node_modules/expo/AppEntry.js",
+  "name": "react-native-template-vindicce-expo",
+  "version": "0.0.5",
+  "scripts": {
+    "generator": "plop",
+    "g": "plop",
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KingHenrique/react-native-template-vindicce"
+  },
+  "keywords": [
+    "react-native",
+    "jest",
+    "template",
+    "boilerplate"
+  ],
+  "author": "Renan Henrique <renan.henrique.fonte@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "expo": "^35.0.0",
+    "react": "16.8.3",
+    "react-dom": "16.8.3",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
+    "react-native-web": "^0.11.7",
+    "react-native-animatable": "latest",
+    "react-native-gesture-handler": "latest",
+    "react-navigation": "latest",
+    "react-navigation-stack": "latest",
+    "react-native-reanimated": "latest",
+    "react-native-screens": "latest",
+    "react-redux": "latest",
+    "redux": "latest",
+    "redux-promise": "latest",
+    "axios": "latest",
+    "redux-thunk": "latest",
+    "redux-saga": "latest",
+    "styled-components": "latest"
+  },
+  "devDependencies": {
+    "plop": "latest",
+    "babel-preset-expo": "^7.0.0"
+  },
+  "private": false
+}
