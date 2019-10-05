@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Container, TextView} from './styles'
+import { actions } from '../../redux/actions'
+import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
-export default function {{pascalCase name}}() {
+function {{pascalCase name}}() {
   return (
     <Container>
       <TextView>{{pascalCase name}}</TextView>
@@ -17,3 +19,11 @@ export default function {{pascalCase name}}() {
 {{pascalCase name}}.propTypes = {
 
 }
+
+const mapStateToProps = state => {
+  return {
+    initial:[]
+  }
+}
+
+export default connect(mapStateToProps)({{pascalCase name}})
