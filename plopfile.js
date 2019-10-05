@@ -73,7 +73,7 @@ module.exports = plop => {
       return actions
     }
   })
-  plop.setGenerator('Function', {
+  plop.setGenerator('Function View', {
     description: 'Create a new Function component',
     prompts: [
       {
