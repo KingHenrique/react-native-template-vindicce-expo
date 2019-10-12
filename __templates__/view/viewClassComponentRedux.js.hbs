@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
 import { actions } from '../../redux/actions'
 import { connect } from 'react-redux'
-import { Container, TextView} from './styles'
+import { Container, Text } from './styles'
 import PropTypes from 'prop-types'
 
 class {{pascalCase name}} extends Component {
+
+  static navigationOptions = {
+    header: null
+  }
 
   constructor(props){
     super(props)
@@ -17,7 +20,7 @@ class {{pascalCase name}} extends Component {
   render(){
     return(
       <Container>
-        <TextView>{{pascalCase name}}</TextView>
+        <Text>{{pascalCase name}}</Text>
       </Container>
     )
   }

@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react'
-import { Container, TextView} from './styles'
+import { Container, Text } from './styles'
 import PropTypes from 'prop-types'
 
 export default function {{pascalCase name}}() {
   return (
     <Container>
-      <TextView>{{pascalCase name}}</TextView>
+      <Text>{{pascalCase name}}</Text>
     </Container>
   );
+}
+
+{{pascalCase name}}.navigationOptions = {
+  header: null
 }
 
 {{pascalCase name}}.defaultProps = {

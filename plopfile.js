@@ -14,7 +14,7 @@ module.exports = plop => {
         type: 'input',
         name: 'name',
         message: 'What should it be called?',
-        default: 'Button',
+        default: 'Home View',
         validate: value => {
           if (/.+/.test(value)) {
             return componentExists(value)
@@ -30,8 +30,8 @@ module.exports = plop => {
       let pathStyles = 'src/views/{{pascalCase name}}/styles.js'
       let componentTemplate =
         data.type == 'Yes'
-          ? './__templates__/class/classComponentRedux.js.hbs'
-          : './__templates__/class/classComponent.js.hbs'
+          ? './__templates__/view/viewClassComponentRedux.js.hbs'
+          : './__templates__/view/viewClassComponent.js.hbs'
       let componentTemplateStyles = './__templates__/common/styles.js.hbs'
       let pathIndex = 'src/views/index.js'
       let patternImport = /\/\/ Import views here\n/g
@@ -74,7 +74,7 @@ module.exports = plop => {
     }
   })
   plop.setGenerator('Function View', {
-    description: 'Create a new Function component',
+    description: 'Create a new Function View',
     prompts: [
       {
         type: 'list',
@@ -87,7 +87,7 @@ module.exports = plop => {
         type: 'input',
         name: 'name',
         message: 'What should it be called?',
-        default: 'Button',
+        default: 'Home View',
         validate: value => {
           if (/.+/.test(value)) {
             return componentExists(value)
@@ -174,8 +174,8 @@ module.exports = plop => {
     actions: data => {
       let componentTemplate =
         data.type == 'Class Component'
-          ? './__templates__/stateless/classComponent.js.hbs'
-          : './__templates__/stateless/statelessComponent.js.hbs'
+          ? './__templates__/components/classComponent.js.hbs'
+          : './__templates__/components/statelessComponent.js.hbs'
       let path = 'src/components/{{pascalCase name}}/index.js'
       let pathStyles = 'src/components/{{pascalCase name}}/styles.js'
       let componentTemplateStyles = './__templates__/common/styles.js.hbs'
@@ -220,7 +220,7 @@ module.exports = plop => {
         type: 'input',
         name: 'name',
         message: 'What should it be called?',
-        default: 'Button',
+        default: 'PesonRedux',
         validate: value => {
           if (/.+/.test(value)) {
             return componentExists(value)

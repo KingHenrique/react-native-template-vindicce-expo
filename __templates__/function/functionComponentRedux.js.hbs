@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Container, TextView} from './styles'
+import { Container, Text } from './styles'
 import { actions } from '../../redux/actions'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
@@ -7,9 +7,13 @@ import PropTypes from 'prop-types'
 function {{pascalCase name}}() {
   return (
     <Container>
-      <TextView>{{pascalCase name}}</TextView>
+      <Text>{{pascalCase name}}</Text>
     </Container>
   );
+}
+
+{{pascalCase name}}.navigationOptions = {
+  header: null
 }
 
 {{pascalCase name}}.defaultProps = {
