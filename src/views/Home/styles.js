@@ -1,12 +1,12 @@
 import styled from 'styled-components/native'
 
-export const Container = styled.View`
+const Container = styled.View`
   flex: 1;
   background: #f37321;
   align-items: center;
   justify-content: center;
 `
-export const Image = styled.Image.attrs({
+const Image = styled.Image.attrs({
   resizeMode: 'contain',
   source: {
     uri:
@@ -16,3 +16,4 @@ export const Image = styled.Image.attrs({
   width: 100%;
   height: 60px;
 `
+export { Container, Image }

@@ -1,28 +1,19 @@
-import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import React, { useState, useEffect } from 'react'
+import * as C from './styles'
+import { actions } from '../../redux/actions'
 import { connect } from 'react-redux'
-import { Container, Image } from './styles'
 import PropTypes from 'prop-types'
 
-class Home extends Component {
-  static navigationOptions = {
-    header: null
-  }
+function Home() {
+  return (
+    <C.Container>
+      <C.Image />
+    </C.Container>
+  )
+}
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      username: ''
-    }
-  }
-
-  render() {
-    return (
-      <Container>
-        <Image />
-      </Container>
-    )
-  }
+Home.navigationOptions = {
+  header: null
 }
 
 Home.defaultProps = {}
