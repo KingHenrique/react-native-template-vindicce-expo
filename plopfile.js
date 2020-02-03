@@ -59,9 +59,9 @@ module.exports = plop => {
         }
       }
     ],
-    actions: data => {
-      let path = data.navigator == "Default" ? 'src/views/{{pascalCase name}}/index.js' : 'src/views/{{pascalCase navigator}}/{{pascalCase name}}/index.js'
-      let pathStyles = data.navigator == "Default" ? 'src/views/{{pascalCase name}}/styles.js': 'src/views/{{pascalCase navigator}}/{{pascalCase name}}/styles.js'
+    actions: data => {    
+      let path = (data.navigator == null || data.navigator == "Default") ? 'src/views/{{pascalCase name}}/index.js' : 'src/views/{{pascalCase navigator}}/{{pascalCase name}}/index.js'
+      let pathStyles = (data.navigator == null || data.navigator == "Default") ? 'src/views/{{pascalCase name}}/styles.js': 'src/views/{{pascalCase navigator}}/{{pascalCase name}}/styles.js'
       let componentTemplate =
         data.type == 'Yes'
           ? './__templates__/view/viewClassComponentRedux.js.hbs'
@@ -72,8 +72,8 @@ module.exports = plop => {
       let patternInsert = /\/\/ Insert views here\n/g
       let componentTemplateImport = './__templates__/common/importView.hbs'
       let componentTemplateInsert = './__templates__/common/insertView.hbs'
-      
-      const actions = data.navigator == "Default" ? [
+            
+      const actions = (data.navigator == null || data.navigator == "Default") ? [
         {
           type: 'add',
           path: path,
@@ -187,7 +187,7 @@ module.exports = plop => {
       }
     ],
     actions: data => {
-      let path = data.navigator == "Default" ? 'src/views/{{pascalCase name}}/index.js' : 'src/views/{{pascalCase navigator}}/{{pascalCase name}}/index.js'
+      let path = (data.navigator == null || data.navigator == "Default") ? 'src/views/{{pascalCase name}}/index.js' : 'src/views/{{pascalCase navigator}}/{{pascalCase name}}/index.js'
       let pathStyles = data.navigator == "Default" ? 'src/views/{{pascalCase name}}/styles.js': 'src/views/{{pascalCase navigator}}/{{pascalCase name}}/styles.js'
       let componentTemplate =
         data.type == 'Yes'
@@ -200,7 +200,7 @@ module.exports = plop => {
       let componentTemplateImport = './__templates__/common/importView.hbs'
       let componentTemplateInsert = './__templates__/common/insertView.hbs'
 
-      const actions = data.navigator == "Default" ? [
+      const actions = (data.navigator == null || data.navigator == "Default") ? [
         {
           type: 'add',
           path: path,
