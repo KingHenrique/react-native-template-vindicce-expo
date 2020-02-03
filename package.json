@@ -1,7 +1,7 @@
 {
   "main": "node_modules/expo/AppEntry.js",
   "name": "react-native-template-vindicce-expo",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "scripts": {
     "generator": "plop",
     "g": "plop",
@@ -31,16 +31,16 @@
     "react-native-web": "^0.11.7",
     "react-native-animatable": "latest",
     "react-native-gesture-handler": "~1.3.0",
-    "react-navigation": "latest",
-    "react-navigation-stack": "latest",
-    "react-native-reanimated": "latest",
-    "react-native-screens": "latest",
+    "react-navigation": "~3.13.0",
+    "react-navigation-stack": "~1.9.3",
+    "react-native-reanimated": "~1.3.0",
+    "react-native-screens": "~2.0.0-alpha.3",
     "react-redux": "latest",
     "redux": "latest",
     "redux-promise": "latest",
     "axios": "latest",
-    "redux-thunk": "latest",
-    "redux-saga": "latest",
+    "redux-thunk": "~2.3.0",
+    "redux-saga": "~1.1.1",
     "styled-components": "latest"
   },
   "devDependencies": {
