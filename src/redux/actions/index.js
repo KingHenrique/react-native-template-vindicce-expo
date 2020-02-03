@@ -1,4 +1,4 @@
 // Import actions here
-export const actions = {
+export {
   // Insert actions here
 }
