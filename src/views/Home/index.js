@@ -17,7 +17,28 @@ export default function Home() {
 
   return (
     <C.Container>
-      <C.Image />
+      <C.Logo>
+        <C.Image />
+      </C.Logo>
+      <C.Informations>
+        <C.InfoTitle>
+          <C.InfoTitleBold>yarn g</C.InfoTitleBold>, para gerar componentes
+        </C.InfoTitle>
+        <C.Info>• View, para gerar um container com ou sem redux.</C.Info>
+        <C.Info>
+          • Function View, para gerar um container com ou sem redux, usando o
+          novo padrão de hooks.
+        </C.Info>
+        <C.Info>
+          • Components, para gerar componentes de uso compartilhado.
+        </C.Info>
+        <C.Info>
+          • Redux, para a crição de um redux, com actions e sagas.
+        </C.Info>
+        <C.Info>
+          • Flow, para a criação de um novo flow, utilizando o stackNavigation.
+        </C.Info>
+      </C.Informations>
     </C.Container>
   )
 }
