@@ -1,7 +1,7 @@
 {
   "main": "node_modules/expo/AppEntry.js",
   "name": "react-native-template-vindicce-expo",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "scripts": {
     "generator": "plop",
     "g": "plop",
