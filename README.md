@@ -46,10 +46,9 @@ run yarn g to see the options
 - `Flow`: To create a new application flow, already as a standard view, with or without redux, using hooks.
 - `Redux`: To create a new Redux/Actions/Sagas.
 
-:exclamation: :exclamation: :exclamation: 
-#### The model will take care of creating and making all imports to leave what was created with global access.
+:exclamation: :exclamation: :exclamation:
 
-#
+#### The model will take care of creating and making all imports to leave what was created with global access.
 
 ## import examples
 
@@ -75,7 +74,6 @@ import actions, { Word as WordActions } from '../redux/actions'
 ...
 
 ```
-#
 
 ## Links with libs
 
