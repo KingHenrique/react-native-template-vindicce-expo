@@ -46,11 +46,11 @@ run yarn g to see the options
 - `Flow`: To create a new application flow, already as a standard view, with or without redux, using hooks.
 - `Redux`: To create a new Redux/Actions/Sagas.
 
-:bangbang: :bangbang: :bangbang:
+<p align="center" >
+  :bangbang::bangbang::bangbang::bangbang::bangbang::bangbang:
+ </p>
 
 #### The model will take care of creating and making all imports to leave what was created with global access.
-
-:bangbang: :bangbang: :bangbang:
 
 ## import examples
 
