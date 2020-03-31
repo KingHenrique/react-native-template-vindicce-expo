@@ -40,8 +40,8 @@ You can starting a new project this way:
 
 run `yarn g` to see the options
 
-- `Function View`: To create Views, with or without redux, using hooks.
-- `View`: To create visualizations, with or without redux, in the class or function pattern.
+- `Function View`: To create a functions Views, with or without redux, using hooks.
+- `View`: To create Views(containers), with or without redux, in the class or function pattern.
 - `Component`: For the creation of components, in the class or function pattern.
 - `Flow`: To create a new application flow, already as a standard view, with or without redux, using hooks.
 - `Redux`: To create a new Redux/Actions/Sagas.
