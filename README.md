@@ -38,7 +38,7 @@ You can starting a new project this way:
 
 ## Generator Options
 
-run yarn g to see the options
+run `yarn g` to see the options
 
 - `Function View`: To create Views, with or without redux, using hooks.
 - `View`: To create visualizations, with or without redux, in the class or function pattern.
@@ -46,11 +46,7 @@ run yarn g to see the options
 - `Flow`: To create a new application flow, already as a standard view, with or without redux, using hooks.
 - `Redux`: To create a new Redux/Actions/Sagas.
 
-<p align="center" >
-  :bangbang::bangbang::bangbang::bangbang::bangbang::bangbang:
- </p>
-
-#### The model will take care of creating and making all imports to leave what was created with global access.
+#### :exclamation: `The model will take care of creating and making all imports to leave what was created with global access.`
 
 ## import examples
 
