@@ -47,13 +47,13 @@ run yarn g to see the options
 - `Redux`: To create a new Redux/Actions/Sagas.
 
 :exclamation: :exclamation: :exclamation: 
-`The model will take care of creating and making all imports to leave what was created with global access.`
+#### The model will take care of creating and making all imports to leave what was created with global access.
 
 #
 
-All codes can be imported from the index.js of their respective folders.
-
 ## import examples
+
+All codes can be imported from the index.js of their respective folders.
 
 ```components
 
