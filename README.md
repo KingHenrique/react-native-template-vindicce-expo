@@ -11,8 +11,9 @@ You can starting a new project this way:
 <p align="center" >
 <p align="center" >
    <a href="https://reactnative.gallery/FaridSafi/gifted-chat">
-    <img alt="https://avatars1.githubusercontent.com/u/22872282?s=80&v=4" width="260" height="510" />
+    <img alt="react-native-gifted-chat" src="https://thumbs.gfycat.com/AbsoluteSadDobermanpinscher-size_restricted.gif" width="260" height="510" />
  </a>
+
 </p>
 
 <h3 align="center">
@@ -517,4 +518,3 @@ Feel free to ask me questions on Twitter [@FaridSafi](https://www.twitter.com/Fa
 ## Hire an expert!
 
 Looking for a ReactNative freelance expert with more than 12 years of experience? Contact Xavier from his [website](https://xaviercarpentier.com)!
-
