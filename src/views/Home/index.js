@@ -24,19 +24,22 @@ export default function Home() {
         <C.InfoTitle>
           <C.InfoTitleBold>yarn g</C.InfoTitleBold>, para gerar componentes
         </C.InfoTitle>
-        <C.Info>• View, para gerar um container com ou sem redux.</C.Info>
         <C.Info>
-          • Function View, para gerar um container com ou sem redux, usando o
-          novo padrão de hooks.
+          • View, to create Views(Container's), with or without redux, in the
+          class or function pattern.
         </C.Info>
         <C.Info>
-          • Components, para gerar componentes de uso compartilhado.
+          • Function View, to create a function Views, with or without redux,
+          using hooks.
         </C.Info>
         <C.Info>
-          • Redux, para a crição de um redux, com actions e sagas.
+          • Components, for the creation of components, in the class or function
+          pattern.
         </C.Info>
+        <C.Info>• Redux, to create a new Redux/Actions/Sagas.</C.Info>
         <C.Info>
-          • Flow, para a criação de um novo flow, utilizando o stackNavigation.
+          • Flow, to create a new application flow, already as a standard view,
+          with or without redux, using hooks.
         </C.Info>
       </C.Informations>
     </C.Container>
@@ -44,7 +47,7 @@ export default function Home() {
 }
 
 Home.navigationOptions = {
-  header: null
+  header: null,
 }
 
 Home.defaultProps = {}
