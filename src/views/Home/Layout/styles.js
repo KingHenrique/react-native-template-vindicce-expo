@@ -1,5 +1,5 @@
 import styled from 'styled-components/native'
-import LOGO from '../../../assets/logoOrange.png'
+import LOGO from '../../../../assets/logoOrange.png'
 
 const Container = styled.View`
   flex: 1;
@@ -11,7 +11,7 @@ const Logo = styled.View`
 `
 const Image = styled.Image.attrs({
   resizeMode: 'contain',
-  source: LOGO
+  source: LOGO,
 })`
   width: 100%;
   height: 60px;

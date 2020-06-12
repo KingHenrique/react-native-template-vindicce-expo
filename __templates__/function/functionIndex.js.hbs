@@ -1,27 +1,31 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import Layout from './Layout'
 import data from './data'
+import Layout from './Layout'
 import PropTypes from 'prop-types'
 
-export default function Home(props) {
-  const dispatch = useDispatch()
-  const example = useSelector((state) => {})
+export default function {{pascalCase name}}(props) {
+  const dispatch = useDispatch();
+  const example = useSelector(state => {});
 
   useEffect(() => {
     // componentDidMount
     return () => {
       //component willUnmount
-    }
-  }, [])
+    };
+  }, []);
 
   return <Layout {...props} data={data} />
 }
 
-Home.navigationOptions = {
-  header: null,
+{{pascalCase name}}.navigationOptions = {
+  header: null
 }
 
-Home.defaultProps = {}
+{{pascalCase name}}.defaultProps = {
 
-Home.propTypes = {}
+}
+
+{{pascalCase name}}.propTypes = {
+
+}
