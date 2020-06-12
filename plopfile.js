@@ -193,7 +193,7 @@ module.exports = (plop) => {
     ],
     actions: (data) => {
       let componentTemplate =
-        './__templates__/function/functionComponent.js.hbs'
+        './__templates__/components/statelessComponent.js.hbs'
 
       let path = 'src/components/{{pascalCase name}}/Layout/index.js'
 
