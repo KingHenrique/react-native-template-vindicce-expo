@@ -40,10 +40,9 @@ You can starting a new project this way:
 
 run `yarn g` to see the options
 
-- `Function View`: To create a functions Views, with or without redux, using hooks.
-- `View`: To create Views(containers), with or without redux, in the class or function pattern.
-- `Component`: For the creation of components, in the class or function pattern.
-- `Flow`: To create a new application flow, already as a standard view, with or without redux, using hooks.
+- `Function View`: • View, to create Views(Container's), with redux.
+- `Component`: • Components, for the creation of components.
+- `Flow`: • Flow, to create a new application flow, already as a standard view, with redux.
 - `Redux`: To create a new Redux/Actions/Sagas.
 
 #### :exclamation: `The model will take care of creating and making all imports to leave what was created with global access.`
