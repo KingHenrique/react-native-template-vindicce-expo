@@ -163,7 +163,7 @@ module.exports = (plop) => {
                 type: 'modify',
                 pattern: patternImport,
                 path: 'src/views/{{pascalCase navigator}}/index.js',
-                templateFile: './__templates__/common/importView.hbs',
+                templateFile: './__templates__/common/importViewDefault.hbs',
               },
               {
                 type: 'modify',
