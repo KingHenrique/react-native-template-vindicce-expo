@@ -71,9 +71,9 @@ module.exports = (plop) => {
         data.navigator == 'Default'
           ? 'src/views/{{pascalCase name}}/Layout/styles.js'
           : 'src/views/{{pascalCase navigator}}/{{pascalCase name}}/Layout/styles.js'
-
+      
       let componentTemplate =
-        data.navigator == 'Default'
+        data.navigator == null || data.navigator == 'Default'
           ? './__templates__/function/functionComponent.js.hbs'
           : './__templates__/function/functionComponentToNavigator.js.hbs'
 
@@ -350,8 +350,7 @@ module.exports = (plop) => {
       let componentTemplateImport = './__templates__/flow/importViewFlow.hbs'
       let componentTemplateInsert = './__templates__/flow/insertViewFlow.hbs'
 
-      let componentTemplate =
-        './__templates__/function/functionComponent.js.hbs'
+      let componentTemplate = './__templates__/function/functionComponentToNavigator.js.hbs'
 
       const actions = [
         {
@@ -375,7 +374,7 @@ module.exports = (plop) => {
           type: 'add',
           path:
             'src/views/{{pascalCase name}}Navigator/{{pascalCase name}}/index.js',
-          templateFile: './__templates__/function/functionIndex.js.hbs',
+          templateFile: './__templates__/function/functionComponent.js.hbs',
         },
         {
           type: 'add',
