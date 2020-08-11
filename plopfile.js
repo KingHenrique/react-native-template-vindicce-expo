@@ -374,7 +374,7 @@ module.exports = (plop) => {
           type: 'add',
           path:
             'src/views/{{pascalCase name}}Navigator/{{pascalCase name}}/index.js',
-          templateFile: './__templates__/function/functionComponent.js.hbs',
+          templateFile: './__templates__/function/functionIndex.js.hbs',
         },
         {
           type: 'add',
