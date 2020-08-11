@@ -73,7 +73,9 @@ module.exports = (plop) => {
           : 'src/views/{{pascalCase navigator}}/{{pascalCase name}}/Layout/styles.js'
 
       let componentTemplate =
-        './__templates__/function/functionComponent.js.hbs'
+        data.navigator == 'Default'
+          ? './__templates__/function/functionComponent.js.hbs'
+          : './__templates__/function/functionComponentToNavigator.js.hbs'
 
       let pathToIndex =
         data.navigator == null || data.navigator == 'Default'

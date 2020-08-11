@@ -1,7 +1,2 @@
-import Home from './Home'
+export { default as Home } from './Home'
 // Import views here
-
-export {
-  Home,
-  // Insert views here
-}

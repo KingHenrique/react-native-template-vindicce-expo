@@ -1,7 +1,2 @@
-import External from './External'
+export { default as External } from './External'
 // Import component here
-
-export {
-  External,
-  // Insert component here
-}
