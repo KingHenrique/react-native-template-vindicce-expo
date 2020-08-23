@@ -62,39 +62,37 @@ module.exports = (plop) => {
             },
           ],
     actions: (data) => {
-      let path =
-        data.navigator == null || data.navigator == 'Default'
-          ? 'src/views/{{pascalCase name}}/Layout/index.js'
-          : 'src/views/{{pascalCase navigator}}/{{pascalCase name}}/Layout/index.js'
+      let notNavigator = data.navigator == null || data.navigator == 'Default'
+
+      let path = notNavigator
+        ? 'src/views/{{pascalCase name}}/Layout/index.js'
+        : 'src/views/{{pascalCase navigator}}/{{pascalCase name}}/Layout/index.js'
 
       let pathStyles =
         data.navigator == 'Default'
           ? 'src/views/{{pascalCase name}}/Layout/styles.js'
           : 'src/views/{{pascalCase navigator}}/{{pascalCase name}}/Layout/styles.js'
-      
-      let componentTemplate =
-        data.navigator == null || data.navigator == 'Default'
-          ? './__templates__/function/functionComponent.js.hbs'
-          : './__templates__/function/functionComponentToNavigator.js.hbs'
 
-      let pathToIndex =
-        data.navigator == null || data.navigator == 'Default'
-          ? 'src/views/{{pascalCase name}}/index.js'
-          : 'src/views/{{pascalCase navigator}}/{{pascalCase name}}/index.js'
+      let componentTemplate = notNavigator
+        ? './__templates__/view/view_layout_index.js.hbs'
+        : './__templates__/view/view_layout_index_to_navigator.js.hbs'
 
-      let pathToIndexData =
-        data.navigator == null || data.navigator == 'Default'
-          ? 'src/views/{{pascalCase name}}/data.js'
-          : 'src/views/{{pascalCase navigator}}/{{pascalCase name}}/data.js'
+      let pathToIndex = notNavigator
+        ? 'src/views/{{pascalCase name}}/index.js'
+        : 'src/views/{{pascalCase navigator}}/{{pascalCase name}}/index.js'
+
+      let pathToIndexData = notNavigator
+        ? 'src/views/{{pascalCase name}}/data.js'
+        : 'src/views/{{pascalCase navigator}}/{{pascalCase name}}/data.js'
 
       let componentTemplateIndex =
         './__templates__/function/functionIndex.js.hbs'
-      let componentTemplateStyles = './__templates__/common/styles.js.hbs'
+
+      let componentTemplateStyles = './__templates__/view/styles.js.hbs'
       let pathIndex = 'src/views/index.js'
       let patternImport = /\/\/ Import views here\n/g
       let patternInsert = /\/\/ Insert views here\n/g
       let componentTemplateImport = './__templates__/common/importView.hbs'
-      let componentTemplateInsert = './__templates__/common/insertView.hbs'
 
       const actions =
         data.navigator == null || data.navigator == 'Default'
@@ -112,30 +110,24 @@ module.exports = (plop) => {
               {
                 type: 'add',
                 path: pathToIndex,
-                templateFile: componentTemplateIndex,
+                templateFile: './__templates__/view/view_index.js.hbs',
               },
               {
                 type: 'add',
                 path: pathToIndexData,
-                templateFile: './__templates__/common/data.hbs',
+                templateFile: './__templates__/view/data.js.hbs',
               },
               {
                 type: 'modify',
                 path: pathIndex,
                 pattern: patternImport,
-                templateFile: componentTemplateImport,
-              },
-              {
-                type: 'modify',
-                path: pathIndex,
-                pattern: patternInsert,
-                templateFile: componentTemplateInsert,
+                templateFile: './__templates__/view/import_view.js.hbs',
               },
               {
                 type: 'modify',
                 path: 'src/routes/Routes.js',
                 pattern: patternInsert,
-                templateFile: './__templates__/common/insertViewRoutes.hbs',
+                templateFile: './__templates__/view/insert_view_routes.hbs',
               },
             ]
           : [
@@ -152,24 +144,24 @@ module.exports = (plop) => {
               {
                 type: 'add',
                 path: pathToIndex,
-                templateFile: componentTemplateIndex,
+                templateFile: './__templates__/view/view_index.js.hbs',
               },
               {
                 type: 'add',
                 path: pathToIndexData,
-                templateFile: './__templates__/common/data.hbs',
+                templateFile: './__templates__/view/data.js.hbs',
               },
               {
                 type: 'modify',
                 pattern: patternImport,
                 path: 'src/views/{{pascalCase navigator}}/index.js',
-                templateFile: './__templates__/common/importViewDefault.hbs',
+                templateFile: './__templates__/view/import_view_default.js.hbs',
               },
               {
                 type: 'modify',
                 pattern: patternInsert,
                 path: 'src/views/{{pascalCase navigator}}/index.js',
-                templateFile: './__templates__/flow/insertViewOnFlow.hbs',
+                templateFile: './__templates__/view/insert_view_on_flow.js.hbs',
               },
             ]
       return actions
@@ -194,59 +186,35 @@ module.exports = (plop) => {
       },
     ],
     actions: (data) => {
-      let componentTemplate =
-        './__templates__/components/statelessComponent.js.hbs'
-
-      let path = 'src/components/{{pascalCase name}}/Layout/index.js'
-
-      let pathStyles = 'src/components/{{pascalCase name}}/Layout/styles.js'
-
-      let pathToIndex = 'src/components/{{pascalCase name}}/index.js'
-
-      let componentTemplateIndex =
-        './__templates__/function/functionIndex.js.hbs'
-
-      let pathToIndexData = 'src/components/{{pascalCase name}}/data.js'
-
-      let componentTemplateStyles = './__templates__/common/styles.js.hbs'
-      let pathIndex = 'src/components/index.js'
       let patternImport = /\/\/ Import component here\n/g
-      let patternInsert = /\/\/ Insert component here\n/g
-      let componentTemplateImport = './__templates__/common/importComponent.hbs'
-      let componentTemplateInsert = './__templates__/common/insertComponent.hbs'
 
       const actions = [
         {
           type: 'add',
-          path: path,
-          templateFile: componentTemplate,
+          path: 'src/components/{{pascalCase name}}/Layout/index.js',
+          templateFile:
+            './__templates__/components/component_layout_index.js.hbs',
         },
         {
           type: 'add',
-          path: pathStyles,
-          templateFile: componentTemplateStyles,
+          path: 'src/components/{{pascalCase name}}/Layout/styles.js',
+          templateFile: './__templates__/components/styles.js.hbs',
         },
         {
           type: 'add',
-          path: pathToIndex,
-          templateFile: componentTemplateIndex,
+          path: 'src/components/{{pascalCase name}}/index.js',
+          templateFile: './__templates__/components/component_index.js.hbs',
         },
         {
           type: 'add',
-          path: pathToIndexData,
-          templateFile: './__templates__/common/data.hbs',
+          path: 'src/components/{{pascalCase name}}/data.js',
+          templateFile: './__templates__/components/data.js.hbs',
         },
         {
           type: 'modify',
-          path: pathIndex,
+          path: 'src/components/index.js',
           pattern: patternImport,
-          templateFile: componentTemplateImport,
-        },
-        {
-          type: 'modify',
-          path: pathIndex,
-          pattern: patternInsert,
-          templateFile: componentTemplateInsert,
+          templateFile: './__templates__/components/import_component.js.hbs',
         },
       ]
 
@@ -287,31 +255,25 @@ module.exports = (plop) => {
           type: 'modify',
           path: 'src/redux/reducers/index.js',
           pattern: /\/\/ Import redux here\n/g,
-          templateFile: './__templates__/redux/importRedux.hbs',
+          templateFile: './__templates__/redux/import_redux.js.hbs',
         },
         {
           type: 'modify',
           path: 'src/redux/reducers/index.js',
           pattern: /\/\/ Insert redux here\n/g,
-          templateFile: './__templates__/redux/insertRedux.hbs',
+          templateFile: './__templates__/redux/insert_redux.js.hbs',
         },
         {
           type: 'modify',
           path: 'src/redux/actions/index.js',
           pattern: /\/\/ Import actions here\n/g,
-          templateFile: './__templates__/redux/importActions.hbs',
-        },
-        {
-          type: 'modify',
-          path: 'src/redux/actions/index.js',
-          pattern: /\/\/ Insert actions here\n/g,
-          templateFile: './__templates__/redux/insertActions.hbs',
+          templateFile: './__templates__/redux/import_actions.js.hbs',
         },
         {
           type: 'modify',
           path: 'src/redux/sagas/index.js',
           pattern: /\/\/ Import action types\n/g,
-          templateFile: './__templates__/redux/importActionsTypes.hbs',
+          templateFile: './__templates__/redux/import_actions_types.js.hbs',
         },
       ]
 
@@ -344,61 +306,48 @@ module.exports = (plop) => {
       },
     ],
     actions: (data) => {
-      let patternImport = /\/\/ Import views here\n/g
-      let patternInsert = /\/\/ Insert views here\n/g
-
-      let componentTemplateImport = './__templates__/flow/importViewFlow.hbs'
-      let componentTemplateInsert = './__templates__/flow/insertViewFlow.hbs'
-
-      let componentTemplate = './__templates__/function/functionComponentToNavigator.js.hbs'
-
       const actions = [
         {
           type: 'add',
           path: 'src/views/{{pascalCase name}}Navigator/index.js',
-          templateFile: './__templates__/flow/indexFlow.hbs',
+          templateFile: './__templates__/flow/index_flow.jbs.hbs',
         },
         {
           type: 'add',
           path:
             'src/views/{{pascalCase name}}Navigator/{{pascalCase name}}/Layout/index.js',
-          templateFile: componentTemplate,
+          templateFile:
+            './__templates__/flow/flow_navigator_layout_index.js.hbs',
         },
         {
           type: 'add',
           path:
             'src/views/{{pascalCase name}}Navigator/{{pascalCase name}}/Layout/styles.js',
-          templateFile: './__templates__/common/styles.js.hbs',
+          templateFile: './__templates__/flow/styles.js.hbs',
         },
         {
           type: 'add',
           path:
             'src/views/{{pascalCase name}}Navigator/{{pascalCase name}}/index.js',
-          templateFile: './__templates__/function/functionIndex.js.hbs',
+          templateFile: './__templates__/flow/flow_navigator_index.js.hbs',
         },
         {
           type: 'add',
           path:
             'src/views/{{pascalCase name}}Navigator/{{pascalCase name}}/data.js',
-          templateFile: './__templates__/common/data.hbs',
+          templateFile: './__templates__/flow/data.js.hbs',
         },
         {
           type: 'modify',
           path: 'src/views/index.js',
-          pattern: patternImport,
-          templateFile: componentTemplateImport,
-        },
-        {
-          type: 'modify',
-          path: 'src/views/index.js',
-          pattern: patternInsert,
-          templateFile: componentTemplateInsert,
+          pattern: /\/\/ Import views here\n/g,
+          templateFile: './__templates__/flow/import_view.js.hbs',
         },
         {
           type: 'modify',
           path: 'src/routes/Routes.js',
-          pattern: patternInsert,
-          templateFile: './__templates__/flow/insertViewRoutesFlow.hbs',
+          pattern: /\/\/ Insert views here\n/g,
+          templateFile: './__templates__/flow/insert_view_on_flow.js.hbs',
         },
       ]
 
